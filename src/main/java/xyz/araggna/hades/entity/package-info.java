@@ -1,4 +1,4 @@
 @NonNullApi
-package xyz.araggna.hades.data;
+package xyz.araggna.hades.entity;
 
 import org.springframework.lang.NonNullApi;

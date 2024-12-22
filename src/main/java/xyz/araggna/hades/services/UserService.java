@@ -5,8 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import xyz.araggna.hades.data.User;
-import xyz.araggna.hades.data.UserRepository;
+import xyz.araggna.hades.entity.User;
+import xyz.araggna.hades.repository.UserRepository;
 
 @Service
 public class UserService {

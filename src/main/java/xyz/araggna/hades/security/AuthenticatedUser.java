@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import xyz.araggna.hades.data.User;
-import xyz.araggna.hades.data.UserRepository;
+import xyz.araggna.hades.entity.User;
+import xyz.araggna.hades.repository.UserRepository;
 
 @Component
 public class AuthenticatedUser {
@@ -22,7 +22,7 @@ public class AuthenticatedUser {
     @Transactional
     public Optional<User> get() {
         return authenticationContext.getAuthenticatedUser(UserDetails.class)
-                .map(userDetails -> userRepository.findByUsername(userDetails.getUsername()));
+                .map(userDetails -> userRepository.findByEmail(userDetails.getUsername()));
     }
 
     public void logout() {
